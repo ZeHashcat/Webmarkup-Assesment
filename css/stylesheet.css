@@ -141,31 +141,6 @@ tr:nth-child(odd) {
 
 /*PC Media Query*/
 @media (min-width: 1280px){
-    /*index.html*/    
-
-    #videoMobile, .mainPageAsideTM, .hamburger {
-        display: none;
-    }
-
-    .headerNav {
-        flex-direction: column;
-    }
-
-    .mainPageArticlesSection {
-        flex: 2;
-    }
-
-    .mainPageArticleSection article {
-        flex-direction: column;
-        flex: 1;
-
-    }
-
-    .mainPageArticleSection figure {
-        flex: 2;
-    }
-
-    /*bestdestinations.html*/
 
     .headerNav{
         display: grid;
@@ -192,6 +167,32 @@ tr:nth-child(odd) {
     gridNav{
         grid-row: 2;    
     }
+
+    /*index.html*/    
+
+    #videoMobile, .mainPageAsideTM, .hamburger {
+        display: none;
+    }
+
+    .headerNav {
+        flex-direction: column;
+    }
+
+    .mainPageArticlesSection {
+        flex: 2;
+    }
+
+    .mainPageArticleSection article {
+        flex-direction: column;
+        flex: 1;
+
+    }
+
+    .mainPageArticleSection figure {
+        flex: 2;
+    }
+
+    /*bestdestinations.html*/
 
     .destinationArticles{
         display: grid;
@@ -249,13 +250,101 @@ tr:nth-child(odd) {
         grid-column: 3;
         grid-row: 1;
     }
+
+    /*tickets.html*/
+
+    .tableAside {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .ticketsTable{
+        grid-column: 1;
+    }
+
+    .productTicketsAside{
+        display: grid;
+        grid-column: 2;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .productTicketsOne{
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .productTicketsTwo{
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .productTicketsThree{
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    /*contact.html*/
+
+    .contactAside{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    fieldset {
+        white-space: pre;    
+    }
+
+    .productContactAside{
+        display: grid;
+        grid-column: 2;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .productContactOne{
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .productContactTwo{
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .productContactThree{
+        grid-column: 1;
+        grid-row: 3;
+    }
 }
 
 /* Tablet Media Query */
 @media (min-width: 551px) and (max-width: 1279px) {
 
-    #videoMobile, .mainPageAsidePC, .navPC, #articleBestFour, .productThree{
+    #videoMobile, .mainPageAsidePC, .navPC, #articleBestFour, .productThree, .productTicketsOne {
         display: none;
+    }
+
+    .headerNav{
+        display: grid;
+        grid-template-columns: 90% 10%;
+    }
+
+    .siteHeader{ 
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .headerFigure{
+        grid-row: 1;
+    }
+
+    h1{
+        grid-row: 2;
+    }
+
+    h2{
+        grid-row: 3;
     }
 
     /*index.html*/
@@ -288,28 +377,6 @@ tr:nth-child(odd) {
     }
 
     /*bestdestinations.html*/
-
-    .headerNav{
-        display: grid;
-        grid-template-columns: 90% 10%;
-    }
-
-    .siteHeader{ 
-        display: grid;
-        grid-template-rows: repeat(3, 1fr);
-    }
-
-    .headerFigure{
-        grid-row: 1;
-    }
-
-    h1{
-        grid-row: 2;
-    }
-
-    h2{
-        grid-row: 3;
-    }
 
     .destinationArticles{
         display: grid;
@@ -358,14 +425,82 @@ tr:nth-child(odd) {
         grid-row: 1;
     }
 
+    /*tickets.html*/
+
+    .productTicketsAside{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+    }
+
+    .productTicketsTwo{
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .productTicketsThree{
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    /*contact.html*/
+
+    .contactAside{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    fieldset {
+        white-space: pre;    
+    }
+
+    .productContactAside{
+        display: grid;
+        grid-column: 2;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .productContactOne{
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .productContactTwo{
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .productContactThree{
+        grid-column: 1;
+        grid-row: 3;
+    }
 }
 
 
 /* Mobile Media Query */
 @media (max-width: 550px) {
 
-    #videoPC, .navPC, .mainPageAsidePC, #logo, #articleBestFour, #articleBestSix {
+    #videoPC, .navPC, .mainPageAsidePC, #logo, #articleBestFour, #articleBestSix, #ticketsInfo {
         display: none;
+    }
+
+    .headerNav{
+        display: grid;
+        grid-template-columns: 80% 20%;
+    }
+
+    .siteHeader{ 
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    h1{
+        grid-row: 1;
+    }
+
+    h2{
+        grid-row: 2;
     }
 
     /*index.html*/
@@ -398,24 +533,6 @@ tr:nth-child(odd) {
     }
 
     /*bestdestinations.html*/
-
-    .headerNav{
-        display: grid;
-        grid-template-columns: 80% 20%;
-    }
-
-    .siteHeader{ 
-        display: grid;
-        grid-template-rows: repeat(2, 1fr);
-    }
-
-    h1{
-        grid-row: 1;
-    }
-
-    h2{
-        grid-row: 2;
-    }
 
     .destinationArticles{
         display: grid;
@@ -455,4 +572,54 @@ tr:nth-child(odd) {
         grid-row: 3;
     }
 
+    /*tickets.html*/
+
+    .productTicketsAside{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .productTicketsOne{
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .productTicketsTwo{
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .productTicketsThree{
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    /*contact.html*/
+
+    fieldset {
+        white-space: pre;    
+    }
+
+    .productContactAside{
+        display: grid;
+        grid-column: 2;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .productContactOne{
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .productContactTwo{
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .productContactThree{
+        grid-column: 1;
+        grid-row: 3;
+    }
 }

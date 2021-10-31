@@ -10,16 +10,16 @@
 
     <body>
 
-        <section class="headerNav flex">
+        <section class="headerNav">
             <header class="siteHeader">
-                <figure>
+                <figure class="headerFigure">
                     <img id="logo" src="img/trvllogoicon.png" title="Travel Logo" alt="Travel Logo">
                 </figure>
                 <h1><strong>Cool Destinations</strong></h1>
                 <h2><em>Destinations that are cool</em></h2>
             </header>
 
-            <nav>
+            <nav class="gridNav">
                 <ul class="navPC">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="bestdestinations.html">Best Destinations</a></li>
@@ -30,46 +30,62 @@
                     <input type="checkbox" id="hamburgerCheck"/>
                     <ul class="hamburgerItems">
                         <li><a href="index.html">Home</a></li>
+                        <li><a href="bestdestinations.html">Best Destinations</a></li>
                         <li><a href="tickets.html">Tickets</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </section>
             </nav>
         </section>
 
-        <form>
-            <fieldset>
-                <legend>Contact Us</legend>
-                <label for="name">First and last name*:</label>
-                <input type="text" id="name" name="name" placeholder="firstname lastname" required>
-                <label for="name">E-mail address*:</label>
-                <input type="email" id="email" name="email" placeholder="name@wobblesoft.com" required>
-                <label for="message">Note*:</label>
-                <textarea id="message" name="message" rows="8" cols="100" maxlength="5000" required ></textarea>
-                <input type="submit" value="Send">
-            </fieldset>
-        </form>
+        <section id="contactInfo">
+            <article>
+                <h3>Contact Details</h3>
+                <ul>
+                    <li>Cool Destinations inc&period;</li>
+                    <li>CoC nr&period; 6667774206996</li>
+                    <li>Bank nr&period; 6996420777666</li>
+                    <li>Woopwoopstraat&comma; Beepbepstad&comma; Woopieland</li>
+                    <li>Phone nr&period; 666 69996 420</li>
+                    <li>Contact&commat;CoolDestinations&period;com</li>
+                </ul>
+            </article>
+        </section>
 
-        <aside>
-            <figure>
-                <a href="https://www.tui.nl/">
-                    <img class="asideImage" src="img/Alexandria.jpg" title="Stanley Bridge" alt="Stanley Bridge in Alexandria">
-                </a>
-                <figcaption>&copy; Ahmed Yousry Mahfouz</figcaption>              
-            </figure>
-            <figure>
-                <a href="https://www.tui.nl/">
-                    <img class="asideImage" src="img/LongIsland.jpg" title="Long Island" alt="Long Island as viewed from a skyscraper">
-                </a>
-                <figcaption>&copy; Antony-22</figcaption>              
-            </figure>
-            <figure>
-                <a href="https://www.tui.nl/">
-                    <img class="asideImage" src="img/ImperialFora.jpg" title="Imperial Fora" alt="Imperial Fora in Rome">
-                </a>
-                <figcaption>&copy; Rabax63</figcaption>              
-            </figure>
-        </aside>
+        <section class=contactAside>
+            <form>
+                <fieldset>
+                    <legend>Contact Us</legend>
+                    <label for="name">First and last name&ast;&colon;</label>
+                    <input type="text" id="name" name="name" placeholder="firstname lastname" required>
+                    <label for="name">E-mail address&ast;&colon;</label>
+                    <input type="email" id="email" name="email" placeholder="name@wobblesoft.com" required>
+                    <label for="message">Note&ast;&colon;</label>
+                    <textarea id="message" name="message" rows="8" cols="50" maxlength="5000" required ></textarea>
+                    <input id="submit" type="submit" value="Send">
+                </fieldset>
+            </form>
+
+            <aside class="productContactAside">
+                <figure class="productContactOne">
+                    <a href="https://www.tui.nl/">
+                        <img class="asideImage" src="img/Alexandria.jpg" title="Stanley Bridge" alt="Stanley Bridge in Alexandria">
+                    </a>
+                    <figcaption>&copy; Ahmed Yousry Mahfouz</figcaption>              
+                </figure>
+                <figure class="productContactTwo">
+                    <a href="https://www.tui.nl/">
+                        <img class="asideImage" src="img/LongIsland.jpg" title="Long Island" alt="Long Island as viewed from a skyscraper">
+                    </a>
+                    <figcaption>&copy; Antony-22</figcaption>              
+                </figure>
+                <figure class="productContactThree">
+                    <a href="https://www.tui.nl/">
+                        <img class="asideImage" src="img/ImperialFora.jpg" title="Imperial Fora" alt="Imperial Fora in Rome">
+                    </a>
+                    <figcaption>&copy; Rabax63</figcaption>              
+                </figure>
+            </aside>
+        </section>
 
         <footer class="siteFooter">
             <p>
