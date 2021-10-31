@@ -170,7 +170,7 @@ tr:nth-child(odd) {
 
     /*index.html*/    
 
-    #videoMobile, .mainPageAsideTM, .hamburger {
+    .mainPageAsideTM, .hamburger {
         display: none;
     }
 
@@ -321,7 +321,7 @@ tr:nth-child(odd) {
 /* Tablet Media Query */
 @media (min-width: 551px) and (max-width: 1279px) {
 
-    #videoMobile, .mainPageAsidePC, .navPC, #articleBestFour, .productThree, .productTicketsOne {
+    .mainPageAsidePC, .navPC, #articleBestFour, .productThree, .productTicketsOne {
         display: none;
     }
 
@@ -481,7 +481,7 @@ tr:nth-child(odd) {
 /* Mobile Media Query */
 @media (max-width: 550px) {
 
-    #videoPC, .navPC, .mainPageAsidePC, #logo, #articleBestFour, #articleBestSix, #ticketsInfo {
+    .navPC, .mainPageAsidePC, #logo, #articleBestFour, #articleBestSix, #ticketsInfo {
         display: none;
     }
 
