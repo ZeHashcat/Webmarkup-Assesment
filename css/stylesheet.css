@@ -103,6 +103,7 @@ article {
     display: block;
 }
 
+
 /* Main style for stuff that isn't responsive and on index.html */
 
 .mainPagePhoto {
@@ -120,6 +121,8 @@ article {
     flex-grow: 0;
     flex-shrink: 0;
 }
+
+/* Main style for stuff that isn't responsive and on bestdestinations.html */
 
 /* Main style for stuff that isn't responsive and on tickets.html */
 
@@ -143,7 +146,7 @@ tr:nth-child(odd) {
     #videoMobile, .mainPageAsideTM, .hamburger {
         display: none;
     }
-    
+
     .headerNav {
         flex-direction: column;
     }
@@ -162,17 +165,101 @@ tr:nth-child(odd) {
         flex: 2;
     }
 
-}
+    /*bestdestinations.html*/
 
+    .headerNav{
+        display: grid;
+        grid-template-rows: 1fr;
+    }
+
+    .siteHeader{ 
+        display: grid;
+        grid-row: 1
+    }
+
+    .headerFigure{
+        grid-row: 1;
+    }
+
+    h1{
+        grid-row: 2;
+    }
+
+    h2{
+        grid-row: 3;
+    }
+
+    gridNav{
+        grid-row: 2;    
+    }
+
+    .destinationArticles{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+    }
+
+    #articleBestOne{
+        grid-column: 2;
+        grid-row: 1/7
+    }
+
+    #articleBestTwo{
+        grid-column: 1;
+        grid-row: 1/3
+    }
+
+    #articleBestThree{
+        grid-column: 3;
+        grid-row: 1/4
+    }
+
+    #articleBestFour{
+        grid-column: 3;
+        grid-row: 4/7
+    }
+
+    #articleBestFive{
+        grid-column: 1;
+        grid-row: 3/8
+    }
+
+    #articleBestSix{
+        grid-column: 2/4;
+        grid-row: 7/8
+    }
+
+    .productAside{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+    }
+
+    .productOne{
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .productTwo{
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .productThree{
+        grid-column: 3;
+        grid-row: 1;
+    }
+}
 
 /* Tablet Media Query */
 @media (min-width: 551px) and (max-width: 1279px) {
-    /*index.html*/
 
-    #videoMobile, .navPC, .mainPageAsidePC {
+    #videoMobile, .mainPageAsidePC, .navPC, #articleBestFour, .productThree{
         display: none;
     }
-    
+
+    /*index.html*/
+
     .siteHeader {
         flex: 5
     }
@@ -199,24 +286,89 @@ tr:nth-child(odd) {
     #articleOne {
         order: 3;
     }
+
+    /*bestdestinations.html*/
+
+    .headerNav{
+        display: grid;
+        grid-template-columns: 90% 10%;
+    }
+
+    .siteHeader{ 
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .headerFigure{
+        grid-row: 1;
+    }
+
+    h1{
+        grid-row: 2;
+    }
+
+    h2{
+        grid-row: 3;
+    }
+
+    .destinationArticles{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+    }
+
+    #articleBestOne{
+        grid-column: 1;
+        grid-row: 1/3;
+    }
+
+    #articleBestTwo{
+        grid-column: 2;
+        grid-row: 1/4;
+    }
+
+    #articleBestThree{
+        grid-column: 1;
+        grid-row: 3/7;
+    }
+
+    #articleBestFive{
+        grid-column: 2;
+        grid-row: 4/7;
+    }
+
+    #articleBestSix{
+        grid-column: 1/3;
+        grid-row: 7/9;
+    }
+
+    .productAside{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+    }
+
+    .productOne{
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .productTwo{
+        grid-column: 2;
+        grid-row: 1;
+    }
+
 }
 
 
 /* Mobile Media Query */
 @media (max-width: 550px) {
+
+    #videoPC, .navPC, .mainPageAsidePC, #logo, #articleBestFour, #articleBestSix {
+        display: none;
+    }
+
     /*index.html*/
-
-    #videoPC {
-        display: none;
-    }
-
-    .navPC {
-        display: none;
-    }
-
-    .mainPageAsidePC {
-        display: none;
-    }
 
     .mainPageArticleSection {
         flex-direction: column;
@@ -243,6 +395,64 @@ tr:nth-child(odd) {
 
     #articleOne {
         order: 3;
+    }
+
+    /*bestdestinations.html*/
+
+    .headerNav{
+        display: grid;
+        grid-template-columns: 80% 20%;
+    }
+
+    .siteHeader{ 
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    h1{
+        grid-row: 1;
+    }
+
+    h2{
+        grid-row: 2;
+    }
+
+    .destinationArticles{
+        display: grid;
+        grid-template-rows: repeat(12, 1fr);
+    }
+
+    #articleBestOne{
+        grid-row: 10/13
+    }
+
+    #articleBestTwo{
+        grid-row: 7/10
+    }
+
+    #articleBestThree{
+        grid-row: 4/7
+    }
+
+    #articleBestFive{
+        grid-row: 1/4
+    }
+
+    .productAside{
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .productOne{
+        grid-row: 1;
+    }
+
+    .productTwo{
+        grid-row: 2;
+    }
+
+    .productThree{
+        grid-row: 3;
     }
 
 }
