@@ -6,11 +6,11 @@
 }
 
 a:hover {
-  color: #F0FF00;
+    color: #F0FF00;
 }
 
 a:active {
-  color: #FF9700;
+    color: #FF9700;
 }
 
 .siteHeader {
@@ -25,7 +25,7 @@ a:active {
     width: 10%;
 }
 
-nav {
+.navPC {
     background-color: #1337FF;
     text-indent: 1em;
 }
@@ -59,13 +59,13 @@ aside {
     padding: 1.5em;
 }
 
-nav, aside, .siteHeader, .siteFooter, .cookieStatement {
+.navPC, aside, .siteHeader, .siteFooter, .cookieStatement {
     border-style: double;
     border-color: #000;
     border-width: 5px;
 }
 
-section article {
+article {
     border-style: double;
     border-color: #000;
     border-width: 5px;
@@ -73,15 +73,52 @@ section article {
     padding: 1.5em;
 }
 
+.flexBody {
+    display: flex;
+    flex-direction: column;
+}
+
 .flex {
     display: flex;
+}
+
+.hamburgerItems a {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+}
+
+.hamburger label {
+    display: block;
+    color: #FFF;
+    font-style: normal;
+    font-size: 1.2em;
+}
+
+.hamburgerItems, .hamburger input {
+    display: none;
+}
+
+.hamburger input:checked ~ .hamburgerItems {
+    display: block;
 }
 
 /* Main style for stuff that isn't responsive and on index.html */
 
 .mainPagePhoto {
-    max-width: 50%;
+    max-width: 100%;
     height: auto;
+}
+
+.mainPageArticlesSection {
+    flex-direction: column;
+    padding: 0em;
+}
+
+.mainPageAsidePC, .mainPageAsideTM {
+    flex-basis: 300px;
+    flex-grow: 0;
+    flex-shrink: 0;
 }
 
 /* Main style for stuff that isn't responsive and on tickets.html */
@@ -101,19 +138,111 @@ tr:nth-child(odd) {
 
 /*PC Media Query*/
 @media (min-width: 1280px){
-    /*index.html*/
-}
+    /*index.html*/    
+
+    #videoMobile, .mainPageAsideTM, .hamburger {
+        display: none;
+    }
     
-    
-/* Tablet Media Query */
-@media (min-width: 481px max-width: 1279px) {
-    /*index.html*/
-    
+    .headerNav {
+        flex-direction: column;
+    }
+
+    .mainPageArticlesSection {
+        flex: 2;
+    }
+
+    .mainPageArticleSection article {
+        flex-direction: column;
+        flex: 1;
+
+    }
+
+    .mainPageArticleSection figure {
+        flex: 2;
+    }
+
 }
 
-    
-/* Mobile Media Query */
-@media (max-width: 480px) {
+
+/* Tablet Media Query */
+@media (min-width: 551px) and (max-width: 1279px) {
     /*index.html*/
+
+    #videoMobile, .navPC, .mainPageAsidePC {
+        display: none;
+    }
     
+    .siteHeader {
+        flex: 5
+    }
+
+    .mainPageArticleSection article {
+        flex-direction: column;
+        flex: 1;
+        order: 2;
+    }
+
+    .mainPageArticleSection figure {
+        flex: 2;
+        order: 1;
+    }
+
+    #articleThree {
+        order: 1;
+    }
+
+    #articleTwo {
+        order: 2;
+    }
+
+    #articleOne {
+        order: 3;
+    }
+}
+
+
+/* Mobile Media Query */
+@media (max-width: 550px) {
+    /*index.html*/
+
+    #videoPC {
+        display: none;
+    }
+
+    .navPC {
+        display: none;
+    }
+
+    .mainPageAsidePC {
+        display: none;
+    }
+
+    .mainPageArticleSection {
+        flex-direction: column;
+    }
+
+    .mainPageArticleSection article {
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .mainPageArticleSection figure {
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #articleThree {
+        order: 1;
+    }
+
+    #articleTwo {
+        order: 2;
+    }
+
+    #articleOne {
+        order: 3;
+    }
+
 }

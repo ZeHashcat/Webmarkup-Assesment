@@ -10,21 +10,32 @@
 
     <body>
 
-        <header class="siteHeader">
-            <figure>
-                <img id="logo" src="img/trvllogoicon.png" title="Travel Logo" alt="Travel Logo">
-            </figure>
-            <h1><strong>Cool Destinations</strong></h1>
-            <h2><em>Destinations that are cool</em></h2>
-        </header>
+        <section class="headerNav flex">
+            <header class="siteHeader">
+                <figure>
+                    <img id="logo" src="img/trvllogoicon.png" title="Travel Logo" alt="Travel Logo">
+                </figure>
+                <h1><strong>Cool Destinations</strong></h1>
+                <h2><em>Destinations that are cool</em></h2>
+            </header>
 
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="bestdestinations.html">Best Destinations</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
+            <nav>
+                <ul class="navPC">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="bestdestinations.html">Best Destinations</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <section class=hamburger>
+                    <label for=hamburgerCheck>&#9776;</label>
+                    <input type="checkbox" id="hamburgerCheck"/>
+                    <ul class="hamburgerItems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tickets.html">Tickets</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </section>
+            </nav>
+        </section>
 
         <section class="ticketsTable">
             <table>
