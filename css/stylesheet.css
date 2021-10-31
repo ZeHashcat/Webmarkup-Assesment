@@ -1,5 +1,119 @@
-@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
+/* Main style for stuff that isn't responsive and coherent across all pages */
 
-* {
-    font-family: 'Notable'
+@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
+#message {
+    resize: none;
+}
+
+a:hover {
+  color: #F0FF00;
+}
+
+a:active {
+  color: #FF9700;
+}
+
+.siteHeader {
+    font-family: 'Notable';
+    background-color: #33E9FF;
+    padding: 1.5em;   
+    letter-spacing: 2px;
+    word-spacing: 10px;
+}
+
+#logo {
+    width: 10%;
+}
+
+nav {
+    background-color: #1337FF;
+    text-indent: 1em;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #FF7FF9;
+    line-height: 1.6;
+}
+
+aside {
+    background-color: #97FF00;
+}
+
+.asideImage {
+    max-width: 20%;
+    height: auto;
+}
+
+.siteFooter {
+    background-color: #00FF64;
+}
+
+.cookieStatement {
+    background-color: #FA0;
+    opacity: 0.5;
+    z-index: 9999;
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    padding: 1.5em;
+}
+
+nav, aside, .siteHeader, .siteFooter, .cookieStatement {
+    border-style: double;
+    border-color: #000;
+    border-width: 5px;
+}
+
+section article {
+    border-style: double;
+    border-color: #000;
+    border-width: 5px;
+    background-color: #FF0008;
+    padding: 1.5em;
+}
+
+.flex {
+    display: flex;
+}
+
+/* Main style for stuff that isn't responsive and on index.html */
+
+.mainPagePhoto {
+    max-width: 50%;
+    height: auto;
+}
+
+/* Main style for stuff that isn't responsive and on tickets.html */
+
+tr:nth-child(even) {
+    background: #E8FF00;
+}
+
+tr:nth-child(odd) {
+    background: #FF0F00;
+}
+
+.ticketsTable {
+    background-color: #123456;
+    padding: 1.5em
+}
+
+/*PC Media Query*/
+@media (min-width: 1280px){
+    /*index.html*/
+}
+    
+    
+/* Tablet Media Query */
+@media (min-width: 481px max-width: 1279px) {
+    /*index.html*/
+    
+}
+
+    
+/* Mobile Media Query */
+@media (max-width: 480px) {
+    /*index.html*/
+    
 }

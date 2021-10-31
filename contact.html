@@ -10,8 +10,10 @@
 
     <body>
 
-        <header>
-            <img src="img/trvllogoicon.png" title="Travel Logo" alt="Travel Logo">
+        <header class="siteHeader">
+            <figure>
+                <img id="logo" src="img/trvllogoicon.png" title="Travel Logo" alt="Travel Logo">
+            </figure>
             <h1><strong>Cool Destinations</strong></h1>
             <h2><em>Destinations that are cool</em></h2>
         </header>
@@ -32,7 +34,7 @@
                 <label for="name">E-mail address*:</label>
                 <input type="email" id="email" name="email" placeholder="name@wobblesoft.com" required>
                 <label for="message">Note*:</label>
-                <textarea style="resize: none;" id="message" name="message" rows="8" cols="100" maxlength="5000" required ></textarea>
+                <textarea id="message" name="message" rows="8" cols="100" maxlength="5000" required ></textarea>
                 <input type="submit" value="Send">
             </fieldset>
         </form>
@@ -40,31 +42,31 @@
         <aside>
             <figure>
                 <a href="https://www.tui.nl/">
-                    <img src="img/Alexandria.jpg" title="Stanley Bridge" alt="Stanley Bridge in Alexandria">
+                    <img class="asideImage" src="img/Alexandria.jpg" title="Stanley Bridge" alt="Stanley Bridge in Alexandria">
                 </a>
                 <figcaption>&copy; Ahmed Yousry Mahfouz</figcaption>              
             </figure>
             <figure>
                 <a href="https://www.tui.nl/">
-                    <img src="img/Manhattan.jpg" title="Manhattan" alt="Manhattan as viewed from a skyscraper">
+                    <img class="asideImage" src="img/LongIsland.jpg" title="Long Island" alt="Long Island as viewed from a skyscraper">
                 </a>
-                <figcaption>&copy; Rhododendrites</figcaption>              
+                <figcaption>&copy; Antony-22</figcaption>              
             </figure>
             <figure>
                 <a href="https://www.tui.nl/">
-                    <img src="img/ImperialFora.jpg" title="Imperial Fora" alt="Imperial Fora in Rome">
+                    <img class="asideImage" src="img/ImperialFora.jpg" title="Imperial Fora" alt="Imperial Fora in Rome">
                 </a>
                 <figcaption>&copy; Rabax63</figcaption>              
             </figure>
         </aside>
 
-        <footer>
+        <footer class="siteFooter">
             <p>
                 &copy; Mylo Bronkhorst
             </p>
         </footer>
 
-        <section>
+        <section class="cookieStatement">
             <p>
                 Cookie statement
             </p>
